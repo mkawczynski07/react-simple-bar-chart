@@ -14,7 +14,13 @@ const config = {
   output: {
     filename: 'index.js',
     path: resolve(__dirname, 'build'),
-    publicPath: ''
+    publicPath: '',
+    libraryTarget: "commonjs"
+  },
+
+  externals: {
+    'react': 'commonjs react',
+    'react-dom': 'commonjs react-dom'
   },
 
   plugins: [
@@ -23,17 +29,17 @@ const config = {
       minimize: true,
       debug: false
     }),
-    new webpack.optimize.UglifyJsPlugin({
-      beautify: false,
-      mangle: {
-        screw_ie8: true,
-        keep_fnames: true
-      },
-      compress: {
-        screw_ie8: true
-      },
-      comments: false
-    }),
+//    new webpack.optimize.UglifyJsPlugin({
+//      beautify: false,
+//      mangle: {
+//        screw_ie8: true,
+//        keep_fnames: true
+//      },
+//      compress: {
+//        screw_ie8: true
+//      },
+//      comments: false
+//    }),
     new webpack.DefinePlugin({'process.env': {NODE_ENV: JSON.stringify('production')}})
   ],
 

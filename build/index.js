@@ -1,1 +1,735 @@
-!function(e){function __webpack_require__(r){if(t[r])return t[r].exports;var n=t[r]={i:r,l:!1,exports:{}};return e[r].call(n.exports,n,n.exports,__webpack_require__),n.l=!0,n.exports}var t={};__webpack_require__.m=e,__webpack_require__.c=t,__webpack_require__.i=function(e){return e},__webpack_require__.d=function(e,t,r){__webpack_require__.o(e,t)||Object.defineProperty(e,t,{configurable:!1,enumerable:!0,get:r})},__webpack_require__.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return __webpack_require__.d(t,"a",t),t},__webpack_require__.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},__webpack_require__.p="",__webpack_require__(__webpack_require__.s=38)}([function(e,t,r){"use strict";var n=r(5),o=n;e.exports=o},function(e,t,r){"use strict";function invariant(e,t,r,o,i,a,c,u){if(n(t),!e){var s;if(void 0===t)s=new Error("Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings.");else{var l=[r,o,i,a,c,u],p=0;s=new Error(t.replace(/%s/g,function(){return l[p++]})),s.name="Invariant Violation"}throw s.framesToPop=1,s}}var n=function(e){};e.exports=invariant},function(e,t,r){"use strict";function hasValidRef(e){return void 0!==e.ref}function hasValidKey(e){return void 0!==e.key}var n=r(4),o=r(11),i=(r(0),r(13),Object.prototype.hasOwnProperty),a=r(12),c={key:!0,ref:!0,__self:!0,__source:!0},u=function(e,t,r,n,o,i,c){var u={$$typeof:a,type:e,key:t,ref:r,props:c,_owner:i};return u};u.createElement=function(e,t,r){var n,a={},s=null,l=null;if(null!=t){hasValidRef(t)&&(l=t.ref),hasValidKey(t)&&(s=""+t.key),void 0===t.__self?null:t.__self,void 0===t.__source?null:t.__source;for(n in t)i.call(t,n)&&!c.hasOwnProperty(n)&&(a[n]=t[n])}var p=arguments.length-2;if(1===p)a.children=r;else if(p>1){for(var f=Array(p),h=0;h<p;h++)f[h]=arguments[h+2];a.children=f}if(e&&e.defaultProps){var d=e.defaultProps;for(n in d)void 0===a[n]&&(a[n]=d[n])}return u(e,s,l,0,0,o.current,a)},u.createFactory=function(e){var t=u.createElement.bind(null,e);return t.type=e,t},u.cloneAndReplaceKey=function(e,t){return u(e.type,t,e.ref,e._self,e._source,e._owner,e.props)},u.cloneElement=function(e,t,r){var a,s=n({},e.props),l=e.key,p=e.ref,f=(e._self,e._source,e._owner);if(null!=t){hasValidRef(t)&&(p=t.ref,f=o.current),hasValidKey(t)&&(l=""+t.key);var h;e.type&&e.type.defaultProps&&(h=e.type.defaultProps);for(a in t)i.call(t,a)&&!c.hasOwnProperty(a)&&(void 0===t[a]&&void 0!==h?s[a]=h[a]:s[a]=t[a])}var d=arguments.length-2;if(1===d)s.children=r;else if(d>1){for(var y=Array(d),m=0;m<d;m++)y[m]=arguments[m+2];s.children=y}return u(e.type,l,p,0,0,f,s)},u.isValidElement=function(e){return"object"==typeof e&&null!==e&&e.$$typeof===a},e.exports=u},function(e,t,r){"use strict";function reactProdInvariant(e){for(var t=arguments.length-1,r="Minified React error #"+e+"; visit http://facebook.github.io/react/docs/error-decoder.html?invariant="+e,n=0;n<t;n++)r+="&args[]="+encodeURIComponent(arguments[n+1]);r+=" for the full message or use the non-minified dev environment for full errors and additional helpful warnings.";var o=new Error(r);throw o.name="Invariant Violation",o.framesToPop=1,o}e.exports=reactProdInvariant},function(e,t,r){"use strict";function toObject(e){if(null===e||void 0===e)throw new TypeError("Object.assign cannot be called with null or undefined");return Object(e)}var n=Object.getOwnPropertySymbols,o=Object.prototype.hasOwnProperty,i=Object.prototype.propertyIsEnumerable;e.exports=function(){try{if(!Object.assign)return!1;var e=new String("abc");if(e[5]="de","5"===Object.getOwnPropertyNames(e)[0])return!1;for(var t={},r=0;r<10;r++)t["_"+String.fromCharCode(r)]=r;if("0123456789"!==Object.getOwnPropertyNames(t).map(function(e){return t[e]}).join(""))return!1;var n={};return"abcdefghijklmnopqrst".split("").forEach(function(e){n[e]=e}),"abcdefghijklmnopqrst"===Object.keys(Object.assign({},n)).join("")}catch(e){return!1}}()?Object.assign:function(e,t){for(var r,a,c=toObject(e),u=1;u<arguments.length;u++){r=Object(arguments[u]);for(var s in r)o.call(r,s)&&(c[s]=r[s]);if(n){a=n(r);for(var l=0;l<a.length;l++)i.call(r,a[l])&&(c[a[l]]=r[a[l]])}}return c}},function(e,t,r){"use strict";function makeEmptyFunction(e){return function(){return e}}var n=function(){};n.thatReturns=makeEmptyFunction,n.thatReturnsFalse=makeEmptyFunction(!1),n.thatReturnsTrue=makeEmptyFunction(!0),n.thatReturnsNull=makeEmptyFunction(null),n.thatReturnsThis=function(){return this},n.thatReturnsArgument=function(e){return e},e.exports=n},function(e,t,r){"use strict";var n={};e.exports=n},function(e,t,r){"use strict";function ReactComponent(e,t,r){this.props=e,this.context=t,this.refs=i,this.updater=r||o}var n=r(3),o=r(8),i=(r(13),r(6));r(1),r(0);ReactComponent.prototype.isReactComponent={},ReactComponent.prototype.setState=function(e,t){"object"!=typeof e&&"function"!=typeof e&&null!=e&&n("85"),this.updater.enqueueSetState(this,e),t&&this.updater.enqueueCallback(this,t,"setState")},ReactComponent.prototype.forceUpdate=function(e){this.updater.enqueueForceUpdate(this),e&&this.updater.enqueueCallback(this,e,"forceUpdate")};e.exports=ReactComponent},function(e,t,r){"use strict";var n=(r(0),{isMounted:function(e){return!1},enqueueCallback:function(e,t){},enqueueForceUpdate:function(e){},enqueueReplaceState:function(e,t){},enqueueSetState:function(e,t){}});e.exports=n},function(e,t,r){"use strict";function getBarStyles(e,t,r){var o=e.orientation,a=e.color;return isVertical(o)?n({},i,{height:r.percent+"%",width:t,background:getBarColor(r,a)}):n({},i,{height:t,width:r.percent+"%",background:getBarColor(r,a)})}function getBarWidth(e,t){var r=e.margin,n=e.singleBarWidth,i=e.orientation,a=t.width,c=t.height,u=t.data,s=(isVertical(i)?a:c)-u.length*r,l=s/u.length;return(0,o.Optional)(n).or(l)}function isVertical(e){return"vertical"===e}function getBarColor(e,t){return(0,o.isObject)(e)?e.color||t:t}Object.defineProperty(t,"__esModule",{value:!0}),t.LABEL_STYLES=void 0;var n=Object.assign||function(e){for(var t=1;t<arguments.length;t++){var r=arguments[t];for(var n in r)Object.prototype.hasOwnProperty.call(r,n)&&(e[n]=r[n])}return e};t.default=getBarStyles,t.getBarWidth=getBarWidth,t.isVertical=isVertical;var o=r(10),i={position:"absolute",bottom:0,left:0,transition:"height .3s ease, width .3s ease"},a=t.LABEL_STYLES={position:"absolute",bottom:-25,height:20,textAlign:"center",fontSize:12,fontFamily:"Roboto, Arial",whiteSpace:"nowrap",overflow:"hidden",textOverflow:"ellipsis"};!function(){"undefined"!=typeof __REACT_HOT_LOADER__&&(__REACT_HOT_LOADER__.register(i,"STYLES","c:/projekty/react-simple-bar-chart/app/simple-bar-chart/styles/barStyles.js"),__REACT_HOT_LOADER__.register(a,"LABEL_STYLES","c:/projekty/react-simple-bar-chart/app/simple-bar-chart/styles/barStyles.js"),__REACT_HOT_LOADER__.register(getBarStyles,"getBarStyles","c:/projekty/react-simple-bar-chart/app/simple-bar-chart/styles/barStyles.js"),__REACT_HOT_LOADER__.register(getBarWidth,"getBarWidth","c:/projekty/react-simple-bar-chart/app/simple-bar-chart/styles/barStyles.js"),__REACT_HOT_LOADER__.register(isVertical,"isVertical","c:/projekty/react-simple-bar-chart/app/simple-bar-chart/styles/barStyles.js"),__REACT_HOT_LOADER__.register(getBarColor,"getBarColor","c:/projekty/react-simple-bar-chart/app/simple-bar-chart/styles/barStyles.js"))}()},function(e,t,r){"use strict";function isObject(e){return"object"===(void 0===e?"undefined":n(e))}function isDefined(e){return void 0!==e&&null!==e}function Optional(e){return{or:function(t){return isDefined(e)?e:t},isPresent:function(){return isDefined(e)},get:function(){return e}}}Object.defineProperty(t,"__esModule",{value:!0});var n="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};t.isObject=isObject,t.isDefined=isDefined,t.Optional=Optional;!function(){"undefined"!=typeof __REACT_HOT_LOADER__&&(__REACT_HOT_LOADER__.register(isObject,"isObject","c:/projekty/react-simple-bar-chart/app/simple-bar-chart/utils.js"),__REACT_HOT_LOADER__.register(isDefined,"isDefined","c:/projekty/react-simple-bar-chart/app/simple-bar-chart/utils.js"),__REACT_HOT_LOADER__.register(Optional,"Optional","c:/projekty/react-simple-bar-chart/app/simple-bar-chart/utils.js"))}()},function(e,t,r){"use strict";var n={current:null};e.exports=n},function(e,t,r){"use strict";var n="function"==typeof Symbol&&Symbol.for&&Symbol.for("react.element")||60103;e.exports=n},function(e,t,r){"use strict";var n=!1;e.exports=n},function(e,t,r){"use strict";e.exports=r(26)},function(e,t,r){"use strict";(function(e){var n,o,i="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},a=r(16),c=function(e){return e&&e.__esModule?e:{default:e}}(a);!function(a,c){"object"===i(e)?e.exports=c:(n=c,void 0!==(o="function"==typeof n?n.call(t,r,t,e):n)&&(e.exports=o))}(0,c.default)}).call(t,r(37)(e))},function(e,t,r){"use strict";function _interopRequireDefault(e){return e&&e.__esModule?e:{default:e}}function _classCallCheck(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function _possibleConstructorReturn(e,t){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!t||"object"!=typeof t&&"function"!=typeof t?e:t}function _inherits(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+typeof t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):e.__proto__=t)}Object.defineProperty(t,"__esModule",{value:!0});var n=Object.assign||function(e){for(var t=1;t<arguments.length;t++){var r=arguments[t];for(var n in r)Object.prototype.hasOwnProperty.call(r,n)&&(e[n]=r[n])}return e},o=function(){function defineProperties(e,t){for(var r=0;r<t.length;r++){var n=t[r];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}return function(e,t,r){return t&&defineProperties(e.prototype,t),r&&defineProperties(e,r),e}}(),i=r(14),a=r(17),c=_interopRequireDefault(a),u=r(10),s=r(19),l=_interopRequireDefault(s),p=r(9),f=_interopRequireDefault(p),h=function(e){function SimpleBarChart(e){_classCallCheck(this,SimpleBarChart);var t=_possibleConstructorReturn(this,(SimpleBarChart.__proto__||Object.getPrototypeOf(SimpleBarChart)).call(this,e));return t.state={min:0,max:0,data:[]},t.calculateChartSize=t.calculateChartSize.bind(t),t}return _inherits(SimpleBarChart,e),o(SimpleBarChart,[{key:"componentDidMount",value:function(){this.buildData(this.props.data),this.calculateChartSize(),window.addEventListener("resize",this.calculateChartSize)}},{key:"componentWillReceiveProps",value:function(e){e.data!==this.props.data&&this.buildData(e.data)}},{key:"componentWillUnmount",value:function(){window.removeEventListener("resize",this.calculateChartSize)}},{key:"buildData",value:function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:[],t=this.buildObjectsList(e),r=this.getMax(t),n=this.getMin(t),o=this.calculatePercents(t,r);this.setState({min:n,max:r,data:o})}},{key:"buildObjectsList",value:function(e){return e.map(function(e){return(0,u.isObject)(e)?e:{value:e}})}},{key:"getMax",value:function(e){return e.reduce(function(e,t){return t.value>e?t.value:e},0)}},{key:"getMin",value:function(e){return e.reduce(function(e,t){return t.value<e?t.value:e},0)}},{key:"calculatePercents",value:function(e,t){return e.map(function(e){return n({percent:parseInt(100*e.value/t)},e)})}},{key:"calculateChartSize",value:function(){var e=this.props,t=e.width,r=e.height,n=this.chart.getBoundingClientRect();this.setState({width:(0,u.Optional)(t).or(n.width),height:(0,u.Optional)(r).or(n.height)})}},{key:"render",value:function(){var e=this,t=this.props,r=t.className,o=void 0===r?"":r,i=t.enableAxis,a=this.state,u=a.data,s=(a.min,a.max,a.width),l=a.height,p={width:s,height:l,position:"relative"};return React.createElement("div",{className:"simple-bar-chart "+o,style:p,ref:function(t){return e.chart=t}},i?React.createElement(c.default,n({},this.props,this.state)):null,u.map(function(t,r){return e.renderBar(t,r)}))}},{key:"renderBar",value:function(e,t){var r=(0,p.getBarWidth)(this.props,this.state),o=(0,l.default)(this.props,r,t),i=(0,f.default)(this.props,r,e),a=this.props,c=a.margin,s=a.labelColor,h=n({},p.LABEL_STYLES,{width:"calc(100% + "+c+"px)",left:-1*parseInt(c/2),color:s});return React.createElement("div",{className:"sbc-bar-container",style:o,key:t},React.createElement("div",{className:"sbc-bar",style:i,title:e.label},(0,u.isDefined)(e.label)?React.createElement("span",{style:h,title:e.label},e.label):null))}}]),SimpleBarChart}(i.Component);h.defaultProps={data:[],color:"#7FB2E5",margin:5,orientation:"vertical",xAxisAmount:4,axisColor:"#DFDFDF",axisValueColor:"#787878",enableAxis:!0,labelColor:"#787878"};var d=h;t.default=d;!function(){"undefined"!=typeof __REACT_HOT_LOADER__&&(__REACT_HOT_LOADER__.register(h,"SimpleBarChart","c:/projekty/react-simple-bar-chart/app/simple-bar-chart/SimpleBarChart.js"),__REACT_HOT_LOADER__.register(d,"default","c:/projekty/react-simple-bar-chart/app/simple-bar-chart/SimpleBarChart.js"))}()},function(e,t,r){"use strict";function _classCallCheck(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function _possibleConstructorReturn(e,t){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!t||"object"!=typeof t&&"function"!=typeof t?e:t}function _inherits(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+typeof t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):e.__proto__=t)}Object.defineProperty(t,"__esModule",{value:!0}),t.default=void 0;var n=Object.assign||function(e){for(var t=1;t<arguments.length;t++){var r=arguments[t];for(var n in r)Object.prototype.hasOwnProperty.call(r,n)&&(e[n]=r[n])}return e},o=function(){function defineProperties(e,t){for(var r=0;r<t.length;r++){var n=t[r];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}return function(e,t,r){return t&&defineProperties(e.prototype,t),r&&defineProperties(e,r),e}}(),i=r(14),a=r(18),c=function(e){function Axis(){return _classCallCheck(this,Axis),_possibleConstructorReturn(this,(Axis.__proto__||Object.getPrototypeOf(Axis)).apply(this,arguments))}return _inherits(Axis,e),o(Axis,[{key:"getAxis",value:function(){for(var e=this.props,t=e.xAxisAmount,r=e.width,o=e.axisColor,i=this.sumDataValues(),c=parseInt(i/t),u=[],s=1;s<=t;s+=1)u.push({value:c*s,styles:n({},a.AXIS_STYLES,{bottom:parseInt(c*s*100/i)+"%",width:r,background:o})});return c>0?u:[]}},{key:"sumDataValues",value:function(){return this.props.data.reduce(function(e,t){return e+=t.value},0)}},{key:"render",value:function(){var e=this.props,t=(e.axisInterval,e.axisValueColor),r=this.getAxis(),o=n({},a.VALUE_STYLES,{color:t});return React.createElement("div",null,r.map(function(e,t){return React.createElement("div",{className:"sbc-bar-axis",style:e.styles,key:t},React.createElement("span",{style:o},e.value))}))}}]),Axis}(i.Component);t.default=c;!function(){"undefined"!=typeof __REACT_HOT_LOADER__&&__REACT_HOT_LOADER__.register(c,"Axis","c:/projekty/react-simple-bar-chart/app/simple-bar-chart/components/Axis.js")}()},function(e,t,r){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var n=t.VALUE_STYLES={position:"absolute",display:"block",width:30,top:-8,left:-35,textAlign:"right",fontFamily:"Roboto, Arial",fontSize:10},o=t.AXIS_STYLES={position:"absolute",left:0,height:1};!function(){"undefined"!=typeof __REACT_HOT_LOADER__&&(__REACT_HOT_LOADER__.register(n,"VALUE_STYLES","c:/projekty/react-simple-bar-chart/app/simple-bar-chart/styles/axisStyle.js"),__REACT_HOT_LOADER__.register(o,"AXIS_STYLES","c:/projekty/react-simple-bar-chart/app/simple-bar-chart/styles/axisStyle.js"))}()},function(e,t,r){"use strict";function getBarContainerStyles(e,t,r){var a=e.margin,c=e.orientation,u=a/2;return(0,o.isVertical)(c)?n({},i,{height:"100%",bottom:0,left:0===r?u:(t+a)*r+u}):n({},i,{width:"100%",top:(t+a)*r,left:0})}Object.defineProperty(t,"__esModule",{value:!0});var n=Object.assign||function(e){for(var t=1;t<arguments.length;t++){var r=arguments[t];for(var n in r)Object.prototype.hasOwnProperty.call(r,n)&&(e[n]=r[n])}return e};t.default=getBarContainerStyles;var o=r(9),i={position:"absolute",transition:"width .3s ease, height .3s ease"};!function(){"undefined"!=typeof __REACT_HOT_LOADER__&&(__REACT_HOT_LOADER__.register(i,"STYLES","c:/projekty/react-simple-bar-chart/app/simple-bar-chart/styles/barContainerStyles.js"),__REACT_HOT_LOADER__.register(getBarContainerStyles,"getBarContainerStyles","c:/projekty/react-simple-bar-chart/app/simple-bar-chart/styles/barContainerStyles.js"))}()},function(e,t,r){"use strict";function checkPropTypes(e,t,r,n,o){}e.exports=checkPropTypes},function(e,t,r){"use strict";var n=r(22);e.exports=function(e){return n(e,!1)}},function(e,t,r){"use strict";var n=r(5),o=r(1),i=(r(0),r(23)),a=r(20);e.exports=function(e,t){function getIteratorFn(e){var t=e&&(r&&e[r]||e[c]);if("function"==typeof t)return t}function is(e,t){return e===t?0!==e||1/e==1/t:e!==e&&t!==t}function PropTypeError(e){this.message=e,this.stack=""}function createChainableTypeChecker(e){function checkType(r,n,a,c,s,l,p){if(c=c||u,l=l||a,p!==i)if(t)o(!1,"Calling PropTypes validators directly is not supported by the `prop-types` package. Use `PropTypes.checkPropTypes()` to call them. Read more at http://fb.me/use-check-prop-types");else;return null==n[a]?r?new PropTypeError(null===n[a]?"The "+s+" `"+l+"` is marked as required in `"+c+"`, but its value is `null`.":"The "+s+" `"+l+"` is marked as required in `"+c+"`, but its value is `undefined`."):null:e(n,a,c,s,l)}var r=checkType.bind(null,!1);return r.isRequired=checkType.bind(null,!0),r}function createPrimitiveTypeChecker(e){function validate(t,r,n,o,i,a){var c=t[r];if(getPropType(c)!==e)return new PropTypeError("Invalid "+o+" `"+i+"` of type `"+getPreciseType(c)+"` supplied to `"+n+"`, expected `"+e+"`.");return null}return createChainableTypeChecker(validate)}function createArrayOfTypeChecker(e){function validate(t,r,n,o,a){if("function"!=typeof e)return new PropTypeError("Property `"+a+"` of component `"+n+"` has invalid PropType notation inside arrayOf.");var c=t[r];if(!Array.isArray(c)){return new PropTypeError("Invalid "+o+" `"+a+"` of type `"+getPropType(c)+"` supplied to `"+n+"`, expected an array.")}for(var u=0;u<c.length;u++){var s=e(c,u,n,o,a+"["+u+"]",i);if(s instanceof Error)return s}return null}return createChainableTypeChecker(validate)}function createInstanceTypeChecker(e){function validate(t,r,n,o,i){if(!(t[r]instanceof e)){var a=e.name||u;return new PropTypeError("Invalid "+o+" `"+i+"` of type `"+getClassName(t[r])+"` supplied to `"+n+"`, expected instance of `"+a+"`.")}return null}return createChainableTypeChecker(validate)}function createEnumTypeChecker(e){function validate(t,r,n,o,i){for(var a=t[r],c=0;c<e.length;c++)if(is(a,e[c]))return null;return new PropTypeError("Invalid "+o+" `"+i+"` of value `"+a+"` supplied to `"+n+"`, expected one of "+JSON.stringify(e)+".")}return Array.isArray(e)?createChainableTypeChecker(validate):n.thatReturnsNull}function createObjectOfTypeChecker(e){function validate(t,r,n,o,a){if("function"!=typeof e)return new PropTypeError("Property `"+a+"` of component `"+n+"` has invalid PropType notation inside objectOf.");var c=t[r],u=getPropType(c);if("object"!==u)return new PropTypeError("Invalid "+o+" `"+a+"` of type `"+u+"` supplied to `"+n+"`, expected an object.");for(var s in c)if(c.hasOwnProperty(s)){var l=e(c,s,n,o,a+"."+s,i);if(l instanceof Error)return l}return null}return createChainableTypeChecker(validate)}function createUnionTypeChecker(e){function validate(t,r,n,o,a){for(var c=0;c<e.length;c++){if(null==(0,e[c])(t,r,n,o,a,i))return null}return new PropTypeError("Invalid "+o+" `"+a+"` supplied to `"+n+"`.")}return Array.isArray(e)?createChainableTypeChecker(validate):n.thatReturnsNull}function createShapeTypeChecker(e){function validate(t,r,n,o,a){var c=t[r],u=getPropType(c);if("object"!==u)return new PropTypeError("Invalid "+o+" `"+a+"` of type `"+u+"` supplied to `"+n+"`, expected `object`.");for(var s in e){var l=e[s];if(l){var p=l(c,s,n,o,a+"."+s,i);if(p)return p}}return null}return createChainableTypeChecker(validate)}function isNode(t){switch(typeof t){case"number":case"string":case"undefined":return!0;case"boolean":return!t;case"object":if(Array.isArray(t))return t.every(isNode);if(null===t||e(t))return!0;var r=getIteratorFn(t);if(!r)return!1;var n,o=r.call(t);if(r!==t.entries){for(;!(n=o.next()).done;)if(!isNode(n.value))return!1}else for(;!(n=o.next()).done;){var i=n.value;if(i&&!isNode(i[1]))return!1}return!0;default:return!1}}function isSymbol(e,t){return"symbol"===e||("Symbol"===t["@@toStringTag"]||"function"==typeof Symbol&&t instanceof Symbol)}function getPropType(e){var t=typeof e;return Array.isArray(e)?"array":e instanceof RegExp?"object":isSymbol(t,e)?"symbol":t}function getPreciseType(e){var t=getPropType(e);if("object"===t){if(e instanceof Date)return"date";if(e instanceof RegExp)return"regexp"}return t}function getClassName(e){return e.constructor&&e.constructor.name?e.constructor.name:u}var r="function"==typeof Symbol&&Symbol.iterator,c="@@iterator",u="<<anonymous>>",s={array:createPrimitiveTypeChecker("array"),bool:createPrimitiveTypeChecker("boolean"),func:createPrimitiveTypeChecker("function"),number:createPrimitiveTypeChecker("number"),object:createPrimitiveTypeChecker("object"),string:createPrimitiveTypeChecker("string"),symbol:createPrimitiveTypeChecker("symbol"),any:function(){return createChainableTypeChecker(n.thatReturnsNull)}(),arrayOf:createArrayOfTypeChecker,element:function(){function validate(t,r,n,o,i){var a=t[r];if(!e(a)){return new PropTypeError("Invalid "+o+" `"+i+"` of type `"+getPropType(a)+"` supplied to `"+n+"`, expected a single ReactElement.")}return null}return createChainableTypeChecker(validate)}(),instanceOf:createInstanceTypeChecker,node:function(){function validate(e,t,r,n,o){return isNode(e[t])?null:new PropTypeError("Invalid "+n+" `"+o+"` supplied to `"+r+"`, expected a ReactNode.")}return createChainableTypeChecker(validate)}(),objectOf:createObjectOfTypeChecker,oneOf:createEnumTypeChecker,oneOfType:createUnionTypeChecker,shape:createShapeTypeChecker};return PropTypeError.prototype=Error.prototype,s.checkPropTypes=a,s.PropTypes=s,s}},function(e,t,r){"use strict";e.exports="SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED"},function(e,t,r){"use strict";function escape(e){var t={"=":"=0",":":"=2"};return"$"+(""+e).replace(/[=:]/g,function(e){return t[e]})}function unescape(e){var t={"=0":"=","=2":":"};return(""+("."===e[0]&&"$"===e[1]?e.substring(2):e.substring(1))).replace(/(=0|=2)/g,function(e){return t[e]})}var n={escape:escape,unescape:unescape};e.exports=n},function(e,t,r){"use strict";var n=r(3),o=(r(1),function(e){var t=this;if(t.instancePool.length){var r=t.instancePool.pop();return t.call(r,e),r}return new t(e)}),i=function(e,t){var r=this;if(r.instancePool.length){var n=r.instancePool.pop();return r.call(n,e,t),n}return new r(e,t)},a=function(e,t,r){var n=this;if(n.instancePool.length){var o=n.instancePool.pop();return n.call(o,e,t,r),o}return new n(e,t,r)},c=function(e,t,r,n){var o=this;if(o.instancePool.length){var i=o.instancePool.pop();return o.call(i,e,t,r,n),i}return new o(e,t,r,n)},u=function(e){var t=this;e instanceof t||n("25"),e.destructor(),t.instancePool.length<t.poolSize&&t.instancePool.push(e)},s=o,l=function(e,t){var r=e;return r.instancePool=[],r.getPooled=t||s,r.poolSize||(r.poolSize=10),r.release=u,r},p={addPoolingTo:l,oneArgumentPooler:o,twoArgumentPooler:i,threeArgumentPooler:a,fourArgumentPooler:c};e.exports=p},function(e,t,r){"use strict";var n=r(4),o=r(27),i=r(7),a=r(32),c=r(28),u=r(29),s=r(2),l=r(31),p=r(33),f=r(35),h=(r(0),s.createElement),d=s.createFactory,y=s.cloneElement,m=n,_={Children:{map:o.map,forEach:o.forEach,count:o.count,toArray:o.toArray,only:f},Component:i,PureComponent:a,createElement:h,cloneElement:y,isValidElement:s.isValidElement,PropTypes:l,createClass:c.createClass,createFactory:d,createMixin:function(e){return e},DOM:u,version:p,__spread:m};e.exports=_},function(e,t,r){"use strict";function escapeUserProvidedKey(e){return(""+e).replace(s,"$&/")}function ForEachBookKeeping(e,t){this.func=e,this.context=t,this.count=0}function forEachSingleChild(e,t,r){var n=e.func,o=e.context;n.call(o,t,e.count++)}function forEachChildren(e,t,r){if(null==e)return e;var n=ForEachBookKeeping.getPooled(t,r);a(e,forEachSingleChild,n),ForEachBookKeeping.release(n)}function MapBookKeeping(e,t,r,n){this.result=e,this.keyPrefix=t,this.func=r,this.context=n,this.count=0}function mapSingleChildIntoContext(e,t,r){var n=e.result,a=e.keyPrefix,c=e.func,u=e.context,s=c.call(u,t,e.count++);Array.isArray(s)?mapIntoWithKeyPrefixInternal(s,n,r,i.thatReturnsArgument):null!=s&&(o.isValidElement(s)&&(s=o.cloneAndReplaceKey(s,a+(!s.key||t&&t.key===s.key?"":escapeUserProvidedKey(s.key)+"/")+r)),n.push(s))}function mapIntoWithKeyPrefixInternal(e,t,r,n,o){var i="";null!=r&&(i=escapeUserProvidedKey(r)+"/");var c=MapBookKeeping.getPooled(t,i,n,o);a(e,mapSingleChildIntoContext,c),MapBookKeeping.release(c)}function mapChildren(e,t,r){if(null==e)return e;var n=[];return mapIntoWithKeyPrefixInternal(e,n,null,t,r),n}function forEachSingleChildDummy(e,t,r){return null}function countChildren(e,t){return a(e,forEachSingleChildDummy,null)}function toArray(e){var t=[];return mapIntoWithKeyPrefixInternal(e,t,null,i.thatReturnsArgument),t}var n=r(25),o=r(2),i=r(5),a=r(36),c=n.twoArgumentPooler,u=n.fourArgumentPooler,s=/\/+/g;ForEachBookKeeping.prototype.destructor=function(){this.func=null,this.context=null,this.count=0},n.addPoolingTo(ForEachBookKeeping,c),MapBookKeeping.prototype.destructor=function(){this.result=null,this.keyPrefix=null,this.func=null,this.context=null,this.count=0},n.addPoolingTo(MapBookKeeping,u);var l={forEach:forEachChildren,map:mapChildren,mapIntoWithKeyPrefixInternal:mapIntoWithKeyPrefixInternal,count:countChildren,toArray:toArray};e.exports=l},function(e,t,r){"use strict";function identity(e){return e}function validateMethodOverride(e,t){var r=p.hasOwnProperty(t)?p[t]:null;h.hasOwnProperty(t)&&"OVERRIDE_BASE"!==r&&n("73",t),e&&"DEFINE_MANY"!==r&&"DEFINE_MANY_MERGED"!==r&&n("74",t)}function mixSpecIntoComponent(e,t){if(t){"function"==typeof t&&n("75"),a.isValidElement(t)&&n("76");var r=e.prototype,o=r.__reactAutoBindPairs;t.hasOwnProperty(s)&&f.mixins(e,t.mixins);for(var i in t)if(t.hasOwnProperty(i)&&i!==s){var c=t[i],u=r.hasOwnProperty(i);if(validateMethodOverride(u,i),f.hasOwnProperty(i))f[i](e,c);else{var l=p.hasOwnProperty(i),h="function"==typeof c,d=h&&!l&&!u&&!1!==t.autobind;if(d)o.push(i,c),r[i]=c;else if(u){var y=p[i];(!l||"DEFINE_MANY_MERGED"!==y&&"DEFINE_MANY"!==y)&&n("77",y,i),"DEFINE_MANY_MERGED"===y?r[i]=createMergedResultFunction(r[i],c):"DEFINE_MANY"===y&&(r[i]=createChainedFunction(r[i],c))}else r[i]=c}}}else;}function mixStaticSpecIntoComponent(e,t){if(t)for(var r in t){var o=t[r];if(t.hasOwnProperty(r)){var i=r in f;i&&n("78",r);var a=r in e;a&&n("79",r),e[r]=o}}}function mergeIntoWithNoDuplicateKeys(e,t){e&&t&&"object"==typeof e&&"object"==typeof t||n("80");for(var r in t)t.hasOwnProperty(r)&&(void 0!==e[r]&&n("81",r),e[r]=t[r]);return e}function createMergedResultFunction(e,t){return function(){var r=e.apply(this,arguments),n=t.apply(this,arguments);if(null==r)return n;if(null==n)return r;var o={};return mergeIntoWithNoDuplicateKeys(o,r),mergeIntoWithNoDuplicateKeys(o,n),o}}function createChainedFunction(e,t){return function(){e.apply(this,arguments),t.apply(this,arguments)}}function bindAutoBindMethod(e,t){var r=t.bind(e);return r}function bindAutoBindMethods(e){for(var t=e.__reactAutoBindPairs,r=0;r<t.length;r+=2){var n=t[r],o=t[r+1];e[n]=bindAutoBindMethod(e,o)}}var n=r(3),o=r(4),i=r(7),a=r(2),c=(r(30),r(8)),u=r(6),s=(r(1),r(0),"mixins"),l=[],p={mixins:"DEFINE_MANY",statics:"DEFINE_MANY",propTypes:"DEFINE_MANY",contextTypes:"DEFINE_MANY",childContextTypes:"DEFINE_MANY",getDefaultProps:"DEFINE_MANY_MERGED",getInitialState:"DEFINE_MANY_MERGED",getChildContext:"DEFINE_MANY_MERGED",render:"DEFINE_ONCE",componentWillMount:"DEFINE_MANY",componentDidMount:"DEFINE_MANY",componentWillReceiveProps:"DEFINE_MANY",shouldComponentUpdate:"DEFINE_ONCE",componentWillUpdate:"DEFINE_MANY",componentDidUpdate:"DEFINE_MANY",componentWillUnmount:"DEFINE_MANY",updateComponent:"OVERRIDE_BASE"},f={displayName:function(e,t){e.displayName=t},mixins:function(e,t){if(t)for(var r=0;r<t.length;r++)mixSpecIntoComponent(e,t[r])},childContextTypes:function(e,t){e.childContextTypes=o({},e.childContextTypes,t)},contextTypes:function(e,t){e.contextTypes=o({},e.contextTypes,t)},getDefaultProps:function(e,t){e.getDefaultProps?e.getDefaultProps=createMergedResultFunction(e.getDefaultProps,t):e.getDefaultProps=t},propTypes:function(e,t){e.propTypes=o({},e.propTypes,t)},statics:function(e,t){mixStaticSpecIntoComponent(e,t)},autobind:function(){}},h={replaceState:function(e,t){this.updater.enqueueReplaceState(this,e),t&&this.updater.enqueueCallback(this,t,"replaceState")},isMounted:function(){return this.updater.isMounted(this)}},d=function(){};o(d.prototype,i.prototype,h);var y={createClass:function(e){var t=identity(function(e,r,o){this.__reactAutoBindPairs.length&&bindAutoBindMethods(this),this.props=e,this.context=r,this.refs=u,this.updater=o||c,this.state=null;var i=this.getInitialState?this.getInitialState():null;("object"!=typeof i||Array.isArray(i))&&n("82",t.displayName||"ReactCompositeComponent"),this.state=i});t.prototype=new d,t.prototype.constructor=t,t.prototype.__reactAutoBindPairs=[],l.forEach(mixSpecIntoComponent.bind(null,t)),mixSpecIntoComponent(t,e),t.getDefaultProps&&(t.defaultProps=t.getDefaultProps()),t.prototype.render||n("83");for(var r in p)t.prototype[r]||(t.prototype[r]=null);return t},injection:{injectMixin:function(e){l.push(e)}}};e.exports=y},function(e,t,r){"use strict";var n=r(2),o=n.createFactory,i={a:o("a"),abbr:o("abbr"),address:o("address"),area:o("area"),article:o("article"),aside:o("aside"),audio:o("audio"),b:o("b"),base:o("base"),bdi:o("bdi"),bdo:o("bdo"),big:o("big"),blockquote:o("blockquote"),body:o("body"),br:o("br"),button:o("button"),canvas:o("canvas"),caption:o("caption"),cite:o("cite"),code:o("code"),col:o("col"),colgroup:o("colgroup"),data:o("data"),datalist:o("datalist"),dd:o("dd"),del:o("del"),details:o("details"),dfn:o("dfn"),dialog:o("dialog"),div:o("div"),dl:o("dl"),dt:o("dt"),em:o("em"),embed:o("embed"),fieldset:o("fieldset"),figcaption:o("figcaption"),figure:o("figure"),footer:o("footer"),form:o("form"),h1:o("h1"),h2:o("h2"),h3:o("h3"),h4:o("h4"),h5:o("h5"),h6:o("h6"),head:o("head"),header:o("header"),hgroup:o("hgroup"),hr:o("hr"),html:o("html"),i:o("i"),iframe:o("iframe"),img:o("img"),input:o("input"),ins:o("ins"),kbd:o("kbd"),keygen:o("keygen"),label:o("label"),legend:o("legend"),li:o("li"),link:o("link"),main:o("main"),map:o("map"),mark:o("mark"),menu:o("menu"),menuitem:o("menuitem"),meta:o("meta"),meter:o("meter"),nav:o("nav"),noscript:o("noscript"),object:o("object"),ol:o("ol"),optgroup:o("optgroup"),option:o("option"),output:o("output"),p:o("p"),param:o("param"),picture:o("picture"),pre:o("pre"),progress:o("progress"),q:o("q"),rp:o("rp"),rt:o("rt"),ruby:o("ruby"),s:o("s"),samp:o("samp"),script:o("script"),section:o("section"),select:o("select"),small:o("small"),source:o("source"),span:o("span"),strong:o("strong"),style:o("style"),sub:o("sub"),summary:o("summary"),sup:o("sup"),table:o("table"),tbody:o("tbody"),td:o("td"),textarea:o("textarea"),tfoot:o("tfoot"),th:o("th"),thead:o("thead"),time:o("time"),title:o("title"),tr:o("tr"),track:o("track"),u:o("u"),ul:o("ul"),var:o("var"),video:o("video"),wbr:o("wbr"),circle:o("circle"),clipPath:o("clipPath"),defs:o("defs"),ellipse:o("ellipse"),g:o("g"),image:o("image"),line:o("line"),linearGradient:o("linearGradient"),mask:o("mask"),path:o("path"),pattern:o("pattern"),polygon:o("polygon"),polyline:o("polyline"),radialGradient:o("radialGradient"),rect:o("rect"),stop:o("stop"),svg:o("svg"),text:o("text"),tspan:o("tspan")};e.exports=i},function(e,t,r){"use strict";var n={};e.exports=n},function(e,t,r){"use strict";var n=r(2),o=n.isValidElement,i=r(21);e.exports=i(o)},function(e,t,r){"use strict";function ReactPureComponent(e,t,r){this.props=e,this.context=t,this.refs=a,this.updater=r||i}function ComponentDummy(){}var n=r(4),o=r(7),i=r(8),a=r(6);ComponentDummy.prototype=o.prototype,ReactPureComponent.prototype=new ComponentDummy,ReactPureComponent.prototype.constructor=ReactPureComponent,n(ReactPureComponent.prototype,o.prototype),ReactPureComponent.prototype.isPureReactComponent=!0,e.exports=ReactPureComponent},function(e,t,r){"use strict";e.exports="15.5.4"},function(e,t,r){"use strict";function getIteratorFn(e){var t=e&&(n&&e[n]||e[o]);if("function"==typeof t)return t}var n="function"==typeof Symbol&&Symbol.iterator,o="@@iterator";e.exports=getIteratorFn},function(e,t,r){"use strict";function onlyChild(e){return o.isValidElement(e)||n("143"),e}var n=r(3),o=r(2);r(1);e.exports=onlyChild},function(e,t,r){"use strict";function getComponentKey(e,t){return e&&"object"==typeof e&&null!=e.key?a.escape(e.key):t.toString(36)}function traverseAllChildrenImpl(e,t,r,s){var l=typeof e;if("undefined"!==l&&"boolean"!==l||(e=null),null===e||"string"===l||"number"===l||"object"===l&&e.$$typeof===o)return r(s,e,""===t?c+getComponentKey(e,0):t),1;var p,f,h=0,d=""===t?c:t+u;if(Array.isArray(e))for(var y=0;y<e.length;y++)p=e[y],f=d+getComponentKey(p,y),h+=traverseAllChildrenImpl(p,f,r,s);else{var m=i(e);if(m){var _,b=m.call(e);if(m!==e.entries)for(var v=0;!(_=b.next()).done;)p=_.value,f=d+getComponentKey(p,v++),h+=traverseAllChildrenImpl(p,f,r,s);else for(;!(_=b.next()).done;){var g=_.value;g&&(p=g[1],f=d+a.escape(g[0])+u+getComponentKey(p,0),h+=traverseAllChildrenImpl(p,f,r,s))}}else if("object"===l){var E="",C=String(e);n("31","[object Object]"===C?"object with keys {"+Object.keys(e).join(", ")+"}":C,E)}}return h}function traverseAllChildren(e,t,r){return null==e?0:traverseAllChildrenImpl(e,"",t,r)}var n=r(3),o=(r(11),r(12)),i=r(34),a=(r(1),r(24)),c=(r(0),"."),u=":";e.exports=traverseAllChildren},function(e,t){e.exports=function(e){return e.webpackPolyfill||(e.deprecate=function(){},e.paths=[],e.children||(e.children=[]),Object.defineProperty(e,"loaded",{enumerable:!0,get:function(){return e.l}}),Object.defineProperty(e,"id",{enumerable:!0,get:function(){return e.i}}),e.webpackPolyfill=1),e}},function(e,t,r){e.exports=r(15)}]);
+(function(e, a) { for(var i in a) e[i] = a[i]; }(exports, /******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// identity function for calling harmony imports with the correct context
+/******/ 	__webpack_require__.i = function(value) { return value; };
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 9);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.LABEL_STYLES = undefined;
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+exports.default = getBarStyles;
+exports.getBarWidth = getBarWidth;
+exports.isVertical = isVertical;
+
+var _utils = __webpack_require__(1);
+
+var STYLES = {
+  position: 'absolute',
+  bottom: 0,
+  left: 0,
+  transition: 'height .3s ease, width .3s ease'
+};
+
+var LABEL_STYLES = exports.LABEL_STYLES = {
+  position: 'absolute',
+  bottom: -25,
+  height: 20,
+  textAlign: 'center',
+  fontSize: 12,
+  fontFamily: 'Roboto, Arial',
+  whiteSpace: 'nowrap',
+  overflow: 'hidden',
+  textOverflow: 'ellipsis'
+};
+
+function getBarStyles(_ref, barWidth, item) {
+  var orientation = _ref.orientation,
+      color = _ref.color;
+
+  if (isVertical(orientation)) {
+    return _extends({}, STYLES, {
+      height: item.percent + '%',
+      width: barWidth,
+      background: getBarColor(item, color)
+    });
+  }
+  return _extends({}, STYLES, {
+    height: barWidth,
+    width: item.percent + '%',
+    background: getBarColor(item, color)
+  });
+}
+
+function getBarWidth(_ref2, _ref3) {
+  var margin = _ref2.margin,
+      singleBarWidth = _ref2.singleBarWidth,
+      orientation = _ref2.orientation;
+  var width = _ref3.width,
+      height = _ref3.height,
+      data = _ref3.data;
+
+  var allBarsWidth = (isVertical(orientation) ? width : height) - data.length * margin;
+  var defaultBarWidth = allBarsWidth / data.length;
+  return (0, _utils.Optional)(singleBarWidth).or(defaultBarWidth);
+}
+
+function isVertical(orientation) {
+  return orientation === 'vertical';
+}
+
+function getBarColor(item, color) {
+  return (0, _utils.isObject)(item) ? item.color || color : color;
+}
+;
+
+var _temp = function () {
+  if (typeof __REACT_HOT_LOADER__ === 'undefined') {
+    return;
+  }
+
+  __REACT_HOT_LOADER__.register(STYLES, 'STYLES', 'c:/projekty/react-simple-bar-chart/app/simple-bar-chart/styles/barStyles.js');
+
+  __REACT_HOT_LOADER__.register(LABEL_STYLES, 'LABEL_STYLES', 'c:/projekty/react-simple-bar-chart/app/simple-bar-chart/styles/barStyles.js');
+
+  __REACT_HOT_LOADER__.register(getBarStyles, 'getBarStyles', 'c:/projekty/react-simple-bar-chart/app/simple-bar-chart/styles/barStyles.js');
+
+  __REACT_HOT_LOADER__.register(getBarWidth, 'getBarWidth', 'c:/projekty/react-simple-bar-chart/app/simple-bar-chart/styles/barStyles.js');
+
+  __REACT_HOT_LOADER__.register(isVertical, 'isVertical', 'c:/projekty/react-simple-bar-chart/app/simple-bar-chart/styles/barStyles.js');
+
+  __REACT_HOT_LOADER__.register(getBarColor, 'getBarColor', 'c:/projekty/react-simple-bar-chart/app/simple-bar-chart/styles/barStyles.js');
+}();
+
+;
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+exports.isObject = isObject;
+exports.isDefined = isDefined;
+exports.Optional = Optional;
+function isObject(object) {
+  return (typeof object === 'undefined' ? 'undefined' : _typeof(object)) === 'object';
+}
+
+function isDefined(object) {
+  return typeof object !== 'undefined' && object !== null;
+}
+
+function Optional(value) {
+  return {
+    or: function or(orValue) {
+      return isDefined(value) ? value : orValue;
+    },
+    isPresent: function isPresent() {
+      return isDefined(value);
+    },
+    get: function get() {
+      return value;
+    }
+  };
+}
+;
+
+var _temp = function () {
+  if (typeof __REACT_HOT_LOADER__ === 'undefined') {
+    return;
+  }
+
+  __REACT_HOT_LOADER__.register(isObject, 'isObject', 'c:/projekty/react-simple-bar-chart/app/simple-bar-chart/utils.js');
+
+  __REACT_HOT_LOADER__.register(isDefined, 'isDefined', 'c:/projekty/react-simple-bar-chart/app/simple-bar-chart/utils.js');
+
+  __REACT_HOT_LOADER__.register(Optional, 'Optional', 'c:/projekty/react-simple-bar-chart/app/simple-bar-chart/utils.js');
+}();
+
+;
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports) {
+
+module.exports = require("react");
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(module) {var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+var _SimpleBarChart = __webpack_require__(4);
+
+var _SimpleBarChart2 = _interopRequireDefault(_SimpleBarChart);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+(function (root, factory) {
+  'use strict';
+
+  if (( false ? 'undefined' : _typeof(module)) === 'object') {
+    module.exports = factory;
+  } else if (true) {
+    !(__WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.call(exports, __webpack_require__, exports, module)) :
+				__WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+  } else {
+    root.SimpleBarChart = factory;
+  }
+})(undefined, _SimpleBarChart2.default);
+;
+
+var _temp = function () {
+  if (typeof __REACT_HOT_LOADER__ === 'undefined') {
+    return;
+  }
+}();
+
+;
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)(module)))
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(2);
+
+var _Axis = __webpack_require__(5);
+
+var _Axis2 = _interopRequireDefault(_Axis);
+
+var _utils = __webpack_require__(1);
+
+var _barContainerStyles = __webpack_require__(7);
+
+var _barContainerStyles2 = _interopRequireDefault(_barContainerStyles);
+
+var _barStyles = __webpack_require__(0);
+
+var _barStyles2 = _interopRequireDefault(_barStyles);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var SimpleBarChart = function (_Component) {
+  _inherits(SimpleBarChart, _Component);
+
+  function SimpleBarChart(props) {
+    _classCallCheck(this, SimpleBarChart);
+
+    var _this = _possibleConstructorReturn(this, (SimpleBarChart.__proto__ || Object.getPrototypeOf(SimpleBarChart)).call(this, props));
+
+    _this.state = { min: 0, max: 0, data: [] };
+    _this.calculateChartSize = _this.calculateChartSize.bind(_this);
+    return _this;
+  }
+
+  _createClass(SimpleBarChart, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      this.buildData(this.props.data);
+      this.calculateChartSize();
+      window.addEventListener('resize', this.calculateChartSize);
+    }
+  }, {
+    key: 'componentWillReceiveProps',
+    value: function componentWillReceiveProps(nextProps) {
+      if (nextProps.data !== this.props.data) {
+        this.buildData(nextProps.data);
+      }
+    }
+  }, {
+    key: 'componentWillUnmount',
+    value: function componentWillUnmount() {
+      window.removeEventListener('resize', this.calculateChartSize);
+    }
+  }, {
+    key: 'buildData',
+    value: function buildData() {
+      var newData = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+
+      var result = this.buildObjectsList(newData);
+      var max = this.getMax(result);
+      var min = this.getMin(result);
+      var data = this.calculatePercents(result, max);
+      this.setState({
+        min: min, max: max, data: data
+      });
+    }
+  }, {
+    key: 'buildObjectsList',
+    value: function buildObjectsList(data) {
+      return data.map(function (item) {
+        return (0, _utils.isObject)(item) ? item : { value: item };
+      });
+    }
+  }, {
+    key: 'getMax',
+    value: function getMax(data) {
+      return data.reduce(function (max, item) {
+        return item.value > max ? item.value : max;
+      }, 0);
+    }
+  }, {
+    key: 'getMin',
+    value: function getMin(data) {
+      return data.reduce(function (min, item) {
+        return item.value < min ? item.value : min;
+      }, 0);
+    }
+  }, {
+    key: 'calculatePercents',
+    value: function calculatePercents(data, max) {
+      return data.map(function (item) {
+        return _extends({ percent: parseInt(100 * item.value / max) }, item);
+      });
+    }
+  }, {
+    key: 'calculateChartSize',
+    value: function calculateChartSize() {
+      var _props = this.props,
+          width = _props.width,
+          height = _props.height;
+
+      var size = this.chart.getBoundingClientRect();
+      this.setState({
+        width: (0, _utils.Optional)(width).or(size.width),
+        height: (0, _utils.Optional)(height).or(size.height)
+      });
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _this2 = this;
+
+      var _props2 = this.props,
+          _props2$className = _props2.className,
+          className = _props2$className === undefined ? '' : _props2$className,
+          enableAxis = _props2.enableAxis;
+      var _state = this.state,
+          data = _state.data,
+          min = _state.min,
+          max = _state.max,
+          width = _state.width,
+          height = _state.height;
+
+      var chartStyles = {
+        width: width, height: height,
+        position: 'relative'
+      };
+
+      return React.createElement(
+        'div',
+        { className: 'simple-bar-chart ' + className, style: chartStyles,
+          ref: function ref(chart) {
+            return _this2.chart = chart;
+          } },
+        enableAxis ? React.createElement(_Axis2.default, _extends({}, this.props, this.state)) : null,
+        data.map(function (item, index) {
+          return _this2.renderBar(item, index);
+        })
+      );
+    }
+  }, {
+    key: 'renderBar',
+    value: function renderBar(item, index) {
+      var barWidth = (0, _barStyles.getBarWidth)(this.props, this.state);
+      var barContainerStyles = (0, _barContainerStyles2.default)(this.props, barWidth, index);
+      var barStyles = (0, _barStyles2.default)(this.props, barWidth, item);
+      var _props3 = this.props,
+          margin = _props3.margin,
+          labelColor = _props3.labelColor;
+
+      var labelStyles = _extends({}, _barStyles.LABEL_STYLES, {
+        width: 'calc(100% + ' + margin + 'px)',
+        left: -1 * parseInt(margin / 2),
+        color: labelColor
+      });
+
+      return React.createElement(
+        'div',
+        { className: 'sbc-bar-container',
+          style: barContainerStyles,
+          key: index },
+        React.createElement(
+          'div',
+          { className: 'sbc-bar', style: barStyles, title: item.label },
+          (0, _utils.isDefined)(item.label) ? React.createElement(
+            'span',
+            { style: labelStyles, title: item.label },
+            item.label
+          ) : null
+        )
+      );
+    }
+  }]);
+
+  return SimpleBarChart;
+}(_react.Component);
+
+SimpleBarChart.defaultProps = {
+  data: [],
+  color: '#7FB2E5',
+  margin: 5,
+  orientation: 'vertical',
+  xAxisAmount: 4,
+  axisColor: '#DFDFDF',
+  axisValueColor: '#787878',
+  enableAxis: true,
+  labelColor: '#787878'
+};
+
+var _default = SimpleBarChart;
+exports.default = _default;
+;
+
+var _temp = function () {
+  if (typeof __REACT_HOT_LOADER__ === 'undefined') {
+    return;
+  }
+
+  __REACT_HOT_LOADER__.register(SimpleBarChart, 'SimpleBarChart', 'c:/projekty/react-simple-bar-chart/app/simple-bar-chart/SimpleBarChart.js');
+
+  __REACT_HOT_LOADER__.register(_default, 'default', 'c:/projekty/react-simple-bar-chart/app/simple-bar-chart/SimpleBarChart.js');
+}();
+
+;
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = undefined;
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(2);
+
+var _axisStyle = __webpack_require__(6);
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Axis = function (_Component) {
+  _inherits(Axis, _Component);
+
+  function Axis() {
+    _classCallCheck(this, Axis);
+
+    return _possibleConstructorReturn(this, (Axis.__proto__ || Object.getPrototypeOf(Axis)).apply(this, arguments));
+  }
+
+  _createClass(Axis, [{
+    key: 'getAxis',
+    value: function getAxis() {
+      var _props = this.props,
+          xAxisAmount = _props.xAxisAmount,
+          width = _props.width,
+          axisColor = _props.axisColor;
+
+      var sum = this.sumDataValues();
+      var axisInterval = parseInt(sum / xAxisAmount);
+      var axis = [];
+      for (var x = 1; x <= xAxisAmount; x += 1) {
+        axis.push({
+          value: axisInterval * x,
+          styles: _extends({}, _axisStyle.AXIS_STYLES, {
+            bottom: parseInt(axisInterval * x * 100 / sum) + '%',
+            width: width,
+            background: axisColor
+          })
+        });
+      }
+      return axisInterval > 0 ? axis : [];
+    }
+  }, {
+    key: 'sumDataValues',
+    value: function sumDataValues() {
+      return this.props.data.reduce(function (sum, item) {
+        return sum += item.value;
+      }, 0);
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _props2 = this.props,
+          axisInterval = _props2.axisInterval,
+          axisValueColor = _props2.axisValueColor;
+
+      var axis = this.getAxis();
+      var valueStyles = _extends({}, _axisStyle.VALUE_STYLES, {
+        color: axisValueColor
+      });
+      return React.createElement(
+        'div',
+        null,
+        axis.map(function (axis, index) {
+          return React.createElement(
+            'div',
+            { className: 'sbc-bar-axis',
+              style: axis.styles,
+              key: index },
+            React.createElement(
+              'span',
+              { style: valueStyles },
+              axis.value
+            )
+          );
+        })
+      );
+    }
+  }]);
+
+  return Axis;
+}(_react.Component);
+
+exports.default = Axis;
+;
+
+var _temp = function () {
+  if (typeof __REACT_HOT_LOADER__ === 'undefined') {
+    return;
+  }
+
+  __REACT_HOT_LOADER__.register(Axis, 'Axis', 'c:/projekty/react-simple-bar-chart/app/simple-bar-chart/components/Axis.js');
+}();
+
+;
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var VALUE_STYLES = exports.VALUE_STYLES = {
+  position: 'absolute',
+  display: 'block',
+  width: 30,
+  top: -8,
+  left: -35,
+  textAlign: 'right',
+  fontFamily: 'Roboto, Arial',
+  fontSize: 10
+};
+
+var AXIS_STYLES = exports.AXIS_STYLES = {
+  position: 'absolute',
+  left: 0,
+  height: 1
+};
+;
+
+var _temp = function () {
+  if (typeof __REACT_HOT_LOADER__ === 'undefined') {
+    return;
+  }
+
+  __REACT_HOT_LOADER__.register(VALUE_STYLES, 'VALUE_STYLES', 'c:/projekty/react-simple-bar-chart/app/simple-bar-chart/styles/axisStyle.js');
+
+  __REACT_HOT_LOADER__.register(AXIS_STYLES, 'AXIS_STYLES', 'c:/projekty/react-simple-bar-chart/app/simple-bar-chart/styles/axisStyle.js');
+}();
+
+;
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+exports.default = getBarContainerStyles;
+
+var _barStyles = __webpack_require__(0);
+
+var STYLES = {
+  position: 'absolute',
+  transition: 'width .3s ease, height .3s ease'
+};
+
+function getBarContainerStyles(props, barWidth, index) {
+  var margin = props.margin,
+      orientation = props.orientation;
+
+  var chartLeftMargin = margin / 2;
+
+  if ((0, _barStyles.isVertical)(orientation)) {
+    return _extends({}, STYLES, {
+      height: '100%',
+      bottom: 0,
+      left: index === 0 ? chartLeftMargin : (barWidth + margin) * index + chartLeftMargin
+    });
+  }
+  return _extends({}, STYLES, {
+    width: '100%',
+    top: (barWidth + margin) * index,
+    left: 0
+  });
+}
+;
+
+var _temp = function () {
+  if (typeof __REACT_HOT_LOADER__ === 'undefined') {
+    return;
+  }
+
+  __REACT_HOT_LOADER__.register(STYLES, 'STYLES', 'c:/projekty/react-simple-bar-chart/app/simple-bar-chart/styles/barContainerStyles.js');
+
+  __REACT_HOT_LOADER__.register(getBarContainerStyles, 'getBarContainerStyles', 'c:/projekty/react-simple-bar-chart/app/simple-bar-chart/styles/barContainerStyles.js');
+}();
+
+;
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports) {
+
+module.exports = function(module) {
+	if(!module.webpackPolyfill) {
+		module.deprecate = function() {};
+		module.paths = [];
+		// module.parent = undefined by default
+		if(!module.children) module.children = [];
+		Object.defineProperty(module, "loaded", {
+			enumerable: true,
+			get: function() {
+				return module.l;
+			}
+		});
+		Object.defineProperty(module, "id", {
+			enumerable: true,
+			get: function() {
+				return module.i;
+			}
+		});
+		module.webpackPolyfill = 1;
+	}
+	return module;
+};
+
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(3);
+
+
+/***/ })
+/******/ ])));
+//# sourceMappingURL=index.js.map
