@@ -7,7 +7,7 @@
     "develop": "webpack-dev-server",
     "clean": "rimraf build",
     "test": "mocha --compilers js:babel-core/register --recursive ./tests/**/*.spec.js",
-    "production": "npm run clean && webpack -p --config webpack.production.config.js --progress --profile --colors"
+    "production": "npm run clean && webpack --config webpack.production.config.js --progress --profile --colors"
   },
   "author": "Marek Kawczynski <mkawczynski07@gmail.com>",
   "license": "MIT",
