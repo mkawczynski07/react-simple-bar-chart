@@ -7,6 +7,6 @@ import SimpleBarChart from './simple-bar-chart/SimpleBarChart';
   } else if (typeof define === 'function' && define.amd) {
     define(factory);
   } else {
-    root.CircleChart = factory;
+    root.SimpleBarChart = factory;
   }
 }(this, SimpleBarChart));

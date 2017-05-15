@@ -4,7 +4,7 @@
   "description": "Simple bar chart plugin",
   "main": "build/index.js",
   "scripts": {
-    "start": "webpack-dev-server",
+    "develop": "webpack-dev-server",
     "clean": "rimraf build",
     "test": "mocha --compilers js:babel-core/register --recursive ./tests/**/*.spec.js",
     "production": "npm run clean && webpack -p --config webpack.production.config.js --progress --profile --colors"
