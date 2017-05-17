@@ -6,7 +6,7 @@ const config = {
   devtool: 'cheap-module-source-map',
 
   entry: [
-    './build.js'
+    './simple-bar-chart/SimpleBarChart'
   ],
 
   context: resolve(__dirname, 'app'),
