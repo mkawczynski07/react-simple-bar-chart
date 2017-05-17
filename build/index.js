@@ -1,4 +1,14 @@
-(function(e, a) { for(var i in a) e[i] = a[i]; }(exports, /******/ (function(modules) { // webpackBootstrap
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(typeof exports === 'object' && typeof module === 'object')
+		module.exports = factory(require("react"));
+	else if(typeof define === 'function' && define.amd)
+		define(["react"], factory);
+	else if(typeof exports === 'object')
+		exports["react-simple-bar-chart"] = factory(require("react"));
+	else
+		root["react-simple-bar-chart"] = factory(root["react"]);
+})(this, function(__WEBPACK_EXTERNAL_MODULE_2__) {
+return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
 /******/
@@ -662,5 +672,6 @@ module.exports = __webpack_require__(3);
 
 
 /***/ })
-/******/ ])));
+/******/ ]);
+});
 //# sourceMappingURL=index.js.map

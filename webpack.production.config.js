@@ -15,7 +15,8 @@ const config = {
     filename: 'index.js',
     path: resolve(__dirname, 'build'),
     publicPath: '',
-    libraryTarget: "commonjs"
+    library: 'react-simple-bar-chart',
+    libraryTarget: "umd"
   },
 
   externals: {
