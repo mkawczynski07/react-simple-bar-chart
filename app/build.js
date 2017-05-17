@@ -1,6 +1,8 @@
 import SimpleBarChart from './simple-bar-chart/SimpleBarChart';
 
 (function (root, factory) {
+  console.log(SimpleBarChart);
+  console.log(factory);
   'use strict';
   if (typeof module === 'object') {
     module.exports = factory;

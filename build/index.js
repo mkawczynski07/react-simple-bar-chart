@@ -240,8 +240,9 @@ var _SimpleBarChart2 = _interopRequireDefault(_SimpleBarChart);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (function (root, factory) {
+  console.log(_SimpleBarChart2.default);
+  console.log(factory);
   'use strict';
-
   if (( false ? 'undefined' : _typeof(module)) === 'object') {
     module.exports = factory;
   } else if (true) {
