@@ -160,17 +160,17 @@ var _temp = function () {
     return;
   }
 
-  __REACT_HOT_LOADER__.register(STYLES, 'STYLES', 'c:/projekty/react-simple-bar-chart/app/simple-bar-chart/styles/barStyles.js');
+  __REACT_HOT_LOADER__.register(STYLES, 'STYLES', '/home/marek/projects/react-simple-bar-chart/app/simple-bar-chart/styles/barStyles.js');
 
-  __REACT_HOT_LOADER__.register(LABEL_STYLES, 'LABEL_STYLES', 'c:/projekty/react-simple-bar-chart/app/simple-bar-chart/styles/barStyles.js');
+  __REACT_HOT_LOADER__.register(LABEL_STYLES, 'LABEL_STYLES', '/home/marek/projects/react-simple-bar-chart/app/simple-bar-chart/styles/barStyles.js');
 
-  __REACT_HOT_LOADER__.register(getBarStyles, 'getBarStyles', 'c:/projekty/react-simple-bar-chart/app/simple-bar-chart/styles/barStyles.js');
+  __REACT_HOT_LOADER__.register(getBarStyles, 'getBarStyles', '/home/marek/projects/react-simple-bar-chart/app/simple-bar-chart/styles/barStyles.js');
 
-  __REACT_HOT_LOADER__.register(getBarWidth, 'getBarWidth', 'c:/projekty/react-simple-bar-chart/app/simple-bar-chart/styles/barStyles.js');
+  __REACT_HOT_LOADER__.register(getBarWidth, 'getBarWidth', '/home/marek/projects/react-simple-bar-chart/app/simple-bar-chart/styles/barStyles.js');
 
-  __REACT_HOT_LOADER__.register(isVertical, 'isVertical', 'c:/projekty/react-simple-bar-chart/app/simple-bar-chart/styles/barStyles.js');
+  __REACT_HOT_LOADER__.register(isVertical, 'isVertical', '/home/marek/projects/react-simple-bar-chart/app/simple-bar-chart/styles/barStyles.js');
 
-  __REACT_HOT_LOADER__.register(getBarColor, 'getBarColor', 'c:/projekty/react-simple-bar-chart/app/simple-bar-chart/styles/barStyles.js');
+  __REACT_HOT_LOADER__.register(getBarColor, 'getBarColor', '/home/marek/projects/react-simple-bar-chart/app/simple-bar-chart/styles/barStyles.js');
 }();
 
 ;
@@ -219,11 +219,11 @@ var _temp = function () {
     return;
   }
 
-  __REACT_HOT_LOADER__.register(isObject, 'isObject', 'c:/projekty/react-simple-bar-chart/app/simple-bar-chart/utils.js');
+  __REACT_HOT_LOADER__.register(isObject, 'isObject', '/home/marek/projects/react-simple-bar-chart/app/simple-bar-chart/utils.js');
 
-  __REACT_HOT_LOADER__.register(isDefined, 'isDefined', 'c:/projekty/react-simple-bar-chart/app/simple-bar-chart/utils.js');
+  __REACT_HOT_LOADER__.register(isDefined, 'isDefined', '/home/marek/projects/react-simple-bar-chart/app/simple-bar-chart/utils.js');
 
-  __REACT_HOT_LOADER__.register(Optional, 'Optional', 'c:/projekty/react-simple-bar-chart/app/simple-bar-chart/utils.js');
+  __REACT_HOT_LOADER__.register(Optional, 'Optional', '/home/marek/projects/react-simple-bar-chart/app/simple-bar-chart/utils.js');
 }();
 
 ;
@@ -250,6 +250,8 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
 
 var _Axis = __webpack_require__(4);
 
@@ -370,8 +372,6 @@ var SimpleBarChart = function (_Component) {
           enableAxis = _props2.enableAxis;
       var _state = this.state,
           data = _state.data,
-          min = _state.min,
-          max = _state.max,
           width = _state.width,
           height = _state.height;
 
@@ -380,13 +380,13 @@ var SimpleBarChart = function (_Component) {
         position: 'relative'
       };
 
-      return React.createElement(
+      return _react2.default.createElement(
         'div',
         { className: 'simple-bar-chart ' + className, style: chartStyles,
           ref: function ref(chart) {
             return _this2.chart = chart;
           } },
-        enableAxis ? React.createElement(_Axis2.default, _extends({}, this.props, this.state)) : null,
+        enableAxis ? _react2.default.createElement(_Axis2.default, _extends({}, this.props, this.state)) : null,
         data.map(function (item, index) {
           return _this2.renderBar(item, index);
         })
@@ -408,15 +408,15 @@ var SimpleBarChart = function (_Component) {
         color: labelColor
       });
 
-      return React.createElement(
+      return _react2.default.createElement(
         'div',
         { className: 'sbc-bar-container',
           style: barContainerStyles,
           key: index },
-        React.createElement(
+        _react2.default.createElement(
           'div',
           { className: 'sbc-bar', style: barStyles, title: item.label },
-          (0, _utils.isDefined)(item.label) ? React.createElement(
+          (0, _utils.isDefined)(item.label) ? _react2.default.createElement(
             'span',
             { style: labelStyles, title: item.label },
             item.label
@@ -450,9 +450,9 @@ var _temp = function () {
     return;
   }
 
-  __REACT_HOT_LOADER__.register(SimpleBarChart, 'SimpleBarChart', 'c:/projekty/react-simple-bar-chart/app/simple-bar-chart/SimpleBarChart.js');
+  __REACT_HOT_LOADER__.register(SimpleBarChart, 'SimpleBarChart', '/home/marek/projects/react-simple-bar-chart/app/simple-bar-chart/SimpleBarChart.js');
 
-  __REACT_HOT_LOADER__.register(_default, 'default', 'c:/projekty/react-simple-bar-chart/app/simple-bar-chart/SimpleBarChart.js');
+  __REACT_HOT_LOADER__.register(_default, 'default', '/home/marek/projects/react-simple-bar-chart/app/simple-bar-chart/SimpleBarChart.js');
 }();
 
 ;
@@ -475,7 +475,11 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _react = __webpack_require__(2);
 
+var _react2 = _interopRequireDefault(_react);
+
 var _axisStyle = __webpack_require__(5);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -525,24 +529,22 @@ var Axis = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      var _props2 = this.props,
-          axisInterval = _props2.axisInterval,
-          axisValueColor = _props2.axisValueColor;
+      var axisValueColor = this.props.axisValueColor;
 
       var axis = this.getAxis();
       var valueStyles = _extends({}, _axisStyle.VALUE_STYLES, {
         color: axisValueColor
       });
-      return React.createElement(
+      return _react2.default.createElement(
         'div',
         null,
         axis.map(function (axis, index) {
-          return React.createElement(
+          return _react2.default.createElement(
             'div',
             { className: 'sbc-bar-axis',
               style: axis.styles,
               key: index },
-            React.createElement(
+            _react2.default.createElement(
               'span',
               { style: valueStyles },
               axis.value
@@ -564,7 +566,7 @@ var _temp = function () {
     return;
   }
 
-  __REACT_HOT_LOADER__.register(Axis, 'Axis', 'c:/projekty/react-simple-bar-chart/app/simple-bar-chart/components/Axis.js');
+  __REACT_HOT_LOADER__.register(Axis, 'Axis', '/home/marek/projects/react-simple-bar-chart/app/simple-bar-chart/components/Axis.js');
 }();
 
 ;
@@ -602,9 +604,9 @@ var _temp = function () {
     return;
   }
 
-  __REACT_HOT_LOADER__.register(VALUE_STYLES, 'VALUE_STYLES', 'c:/projekty/react-simple-bar-chart/app/simple-bar-chart/styles/axisStyle.js');
+  __REACT_HOT_LOADER__.register(VALUE_STYLES, 'VALUE_STYLES', '/home/marek/projects/react-simple-bar-chart/app/simple-bar-chart/styles/axisStyle.js');
 
-  __REACT_HOT_LOADER__.register(AXIS_STYLES, 'AXIS_STYLES', 'c:/projekty/react-simple-bar-chart/app/simple-bar-chart/styles/axisStyle.js');
+  __REACT_HOT_LOADER__.register(AXIS_STYLES, 'AXIS_STYLES', '/home/marek/projects/react-simple-bar-chart/app/simple-bar-chart/styles/axisStyle.js');
 }();
 
 ;
@@ -657,9 +659,9 @@ var _temp = function () {
     return;
   }
 
-  __REACT_HOT_LOADER__.register(STYLES, 'STYLES', 'c:/projekty/react-simple-bar-chart/app/simple-bar-chart/styles/barContainerStyles.js');
+  __REACT_HOT_LOADER__.register(STYLES, 'STYLES', '/home/marek/projects/react-simple-bar-chart/app/simple-bar-chart/styles/barContainerStyles.js');
 
-  __REACT_HOT_LOADER__.register(getBarContainerStyles, 'getBarContainerStyles', 'c:/projekty/react-simple-bar-chart/app/simple-bar-chart/styles/barContainerStyles.js');
+  __REACT_HOT_LOADER__.register(getBarContainerStyles, 'getBarContainerStyles', '/home/marek/projects/react-simple-bar-chart/app/simple-bar-chart/styles/barContainerStyles.js');
 }();
 
 ;
