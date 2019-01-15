@@ -1,4 +1,4 @@
-import {Component} from 'react';
+import React, {Component} from 'react';
 
 import {AXIS_STYLES, VALUE_STYLES} from '../styles/axisStyle';
 
@@ -27,7 +27,7 @@ export default class Axis extends Component {
   }
 
   render() {
-    const {axisInterval, axisValueColor} = this.props;
+    const {axisValueColor} = this.props;
     const axis = this.getAxis();
     const valueStyles = {
       ...VALUE_STYLES,

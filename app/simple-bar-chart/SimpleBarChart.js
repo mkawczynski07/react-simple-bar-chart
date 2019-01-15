@@ -1,4 +1,4 @@
-import {Component} from 'react';
+import React, {Component} from 'react';
 
 import Axis from './components/Axis';
 
@@ -56,7 +56,7 @@ class SimpleBarChart extends Component {
   }
   render() {
     const {className = '', enableAxis} = this.props;
-    const {data, min, max, width, height} = this.state;
+    const {data, width, height} = this.state;
     const chartStyles = {
       width, height,
       position: 'relative'
